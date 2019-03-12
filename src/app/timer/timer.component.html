@@ -1,17 +1,20 @@
-<div class="container">
+<div class="container text-center">
   <div class="row justify-content-center">
     <div class="col-xs-12">
       <br>
       <h1>
-        Pomodoro Productivity Timer! Yum!
+        <u> <i> DARK THEMED </i> </u> <br> Pomodoro Productivity Timer <br>
       </h1>
+      <h5>
+        Finally!
+      </h5>
       <hr>
       <br>
     </div>
   </div>
   <div class="row justify-content-center">
     <div class="col-xs-12">
-      <img class="img-fluid rounded" src="https://upload.wikimedia.org/wikipedia/commons/3/3b/Happy_Tomatoes.jpg"
+      <img class="img-fluid rounded" src="https://farm5.staticflickr.com/4114/4907879960_e8b8f09061.jpg"
         alt="toe mate oh">
     </div>
   </div>
@@ -19,14 +22,24 @@
   <div class="row justify-content-center">
     <div class="col-xs-12">
       <h2>{{ timerMinutes }} minutes remaining</h2>
+      <br>
       <div *ngIf="keepingTime">
-        <hr>Keep Working!</div>
-      <hr>
-      <div class="text-center btn-group">
-        <button (click)="onStartTimer()" class="btn btn-info" type="button" style="color: #342F32;"> {{ timerStarted ? timerMessageStop : timerMessageStart }} </button>
-        <button (click)="onResetTimer()" class="btn btn-danger" type="button">Reset</button>
+        Keep Working!
       </div>
+      <div *ngIf="!keepingTime">
+        Start Working? Click The Button!
+      </div>
+      <br>
+      <div class="text-center btn-group">
+        <button (click)="onStartTimer()" class="btn btn-primary startButton" type="button">
+          {{ timerStarted ? timerMessageStop : timerMessageStart }} </button>
+        <button (click)="onResetTimer()" class="btn btn-danger resetButton" type="button">Reset</button>
+      </div>
+      <hr>
+      <a href="https://en.wikipedia.org/wiki/Pomodoro_Technique" target="_blank" class="btn infoButton">What is the Pomodoro Technique?</a>
+      <br>
+      &nbsp;
+      <p style="font-size: 11px;">crafted with ❤️ by dtbradfield using angular</p>
     </div>
   </div>
-  <br>
 </div>

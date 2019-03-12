@@ -1,0 +1,18 @@
+a {
+    color: #212324;
+}
+
+.startButton {
+    background-color: #212324;
+    color: #A7B38F;
+}
+
+.resetButton {
+    background-color: #A7B38F;
+    color: #212324;
+} 
+
+.infoButton {
+    background-color: #5F7266;
+    color: #212324;
+}
