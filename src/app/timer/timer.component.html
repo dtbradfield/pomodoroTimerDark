@@ -16,4 +16,17 @@
     </div>
   </div>
   <br>
+  <div class="row justify-content-center">
+    <div class="col-xs-12">
+      <h2>{{ timerMinutes }} minutes remaining</h2>
+      <div *ngIf="keepingTime">
+        <hr>Keep Working!</div>
+      <hr>
+      <div class="text-center btn-group">
+        <button (click)="onStartTimer()" class="btn btn-info" type="button" style="color: #342F32;"> {{ timerStarted ? timerMessageStop : timerMessageStart }} </button>
+        <button (click)="onResetTimer()" class="btn btn-danger" type="button">Reset</button>
+      </div>
+    </div>
+  </div>
+  <br>
 </div>
